@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>GD32F527</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+	</natures>
+	<linkedResources>
+		<link><name>Application</name><type>2</type><locationURI>virtual:/virtual</locationURI></link>
+		<link><name>CMSIS</name><type>2</type><locationURI>virtual:/virtual</locationURI></link>
+		<link><name>FreeRTOS</name><type>2</type><locationURI>virtual:/virtual</locationURI></link>
+		<link><name>FreeRTOS_Port</name><type>2</type><locationURI>virtual:/virtual</locationURI></link>
+		<link><name>GD32F527_EVAL</name><type>2</type><locationURI>virtual:/virtual</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS</name><type>2</type><locationURI>virtual:/virtual</locationURI></link>
+		<link><name>Startup</name><type>2</type><locationURI>virtual:/virtual</locationURI></link>
+		<link><name>newlib</name><type>2</type><locationURI>virtual:/virtual</locationURI></link>
+
+		<link><name>Application/gd32f527_it.c</name><type>1</type><locationURI>PARENT-1-PROJECT_LOC/gd32f527_it.c</locationURI></link>
+		<link><name>Application/main.c</name><type>1</type><locationURI>PARENT-1-PROJECT_LOC/main.c</locationURI></link>
+
+		<link><name>CMSIS/system_gd32f527.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/CMSIS/GD/GD32F527/Source/system_gd32f527.c</locationURI></link>
+
+		<link><name>FreeRTOS/croutine.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/croutine.c</locationURI></link>
+		<link><name>FreeRTOS/event_groups.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/event_groups.c</locationURI></link>
+		<link><name>FreeRTOS/heap_4.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/MemMang/heap_4.c</locationURI></link>
+		<link><name>FreeRTOS/list.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/list.c</locationURI></link>
+		<link><name>FreeRTOS/queue.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/queue.c</locationURI></link>
+		<link><name>FreeRTOS/stream_buffer.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/stream_buffer.c</locationURI></link>
+		<link><name>FreeRTOS/tasks.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/tasks.c</locationURI></link>
+		<link><name>FreeRTOS/timers.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/timers.c</locationURI></link>
+
+		<link><name>FreeRTOS_Port/mpu_wrappers_v2_asm.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/GCC/ARM_CM33_NTZ/non_secure/mpu_wrappers_v2_asm.c</locationURI></link>
+		<link><name>FreeRTOS_Port/port.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/GCC/ARM_CM33_NTZ/non_secure/port.c</locationURI></link>
+		<link><name>FreeRTOS_Port/portasm.c</name><type>1</type><locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/GCC/ARM_CM33_NTZ/non_secure/portasm.c</locationURI></link>
+
+		<link><name>GD32F527_EVAL/gd32f527i_eval.c</name><type>1</type><locationURI>PARENT-2-PROJECT_LOC/Utilities/gd32f527i_eval.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_adc.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_adc.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_can.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_can.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_cau.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_cau.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_cau_aes.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_cau_aes.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_cau_des.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_cau_des.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_cau_tdes.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_cau_tdes.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_crc.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_crc.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_ctc.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_ctc.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_dac.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_dac.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_dbg.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_dbg.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_dci.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_dci.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_dma.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_dma.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_enet.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_enet.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_exti.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_exti.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_fmc.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_fmc.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_fwdgt.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_fwdgt.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_gpio.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_gpio.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_hau.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_hau.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_hau_sha_md5.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_hau_sha_md5.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_i2c.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_i2c.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_i2c_add.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_i2c_add.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_ipa.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_ipa.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_iref.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_iref.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_misc.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_misc.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_pkcau.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_pkcau.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_pmu.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_pmu.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_rcu.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_rcu.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_rtc.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_rtc.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_sai.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_sai.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_sdio.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_sdio.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_spi.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_spi.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_syscfg.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_syscfg.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_timer.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_timer.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_tli.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_tli.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_trng.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_trng.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_usart.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_usart.c</locationURI></link>
+		<link><name>GD32F527_PERIPHERALS/gd32f527_wwdgt.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/GD32F527_standard_peripheral/Source/gd32f527_wwdgt.c</locationURI></link>
+
+		<link><name>Startup/startup_gd32f527.S</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/CMSIS/GD/GD32F527/Source/GCC/startup_gd32f527.S</locationURI></link>
+		<link><name>newlib/syscalls.c</name><type>1</type><locationURI>PARENT-3-PROJECT_LOC/GD32F527_Firmware_Library/CMSIS/GD/GD32F527/Source/GCC/newlib/syscalls.c</locationURI></link>
+	</linkedResources>
+</projectDescription>
