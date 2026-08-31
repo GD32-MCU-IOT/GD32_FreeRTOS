@@ -1,0 +1,16 @@
+buildtools.path=Tools/BuildTools/2.10-20180103-1919/bin
+eclipse.preferences.version=1
+ldfile.code.location=FLASH
+ldfile.envm.Origin=
+ldfile.envm.length=
+ldfile.flash.Origin=0x08000000
+ldfile.flash.length=64
+ldfile.ram.Origin=0x20000000
+ldfile.ram.length=12
+ldfile.stack.Origin=0x20001000
+ldfile.stack.length=1
+mcu.target=GD32C231C8T6
+mcu.target.svd=GD32C231.svd
+toolchain.name=GNU Tools for ARM Embedded Processors
+toolchain.path.1287942917=Tools/ARMEmbeddedGCC/bin
+toolchain.prefix=arm-none-eabi-
