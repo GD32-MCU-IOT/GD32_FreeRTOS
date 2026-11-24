@@ -10,18 +10,18 @@
       <TargetName>GD32E235C_EVAL</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
+      <pCCUsed>6120000::V6.12::.\ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>GD32E235CB</Device>
           <Vendor>GigaDevice</Vendor>
-          <PackID>GigaDevice.GD32E23x_DFP.2.5.0</PackID>
-          <PackURL>http://gd32mcu.com/data/documents/pack/</PackURL>
-          <Cpu>IRAM(0x20000000,0x0004000) IROM(0x08000000,0x0020000) CPUTYPE("Cortex-M23") CLOCK(12000000) ELITTLE</Cpu>
+          <PackID>GigaDevice.GD32E23x_DFP.1.0.0</PackID>
+          <PackURL>http://gd32mcu.21ic.com/data/documents/yingyongruanjian/</PackURL>
+          <Cpu>IRAM(0x20000000,0x0002000) IROM(0x08000000,0x0010000) CPUTYPE("Cortex-M23") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
-          <FlashDriverDll>UL2V8M(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0GD32E235 -FS08000000 -FL020000 -FP0($$Device:GD32E235CB$Flash\GD32E235.FLM))</FlashDriverDll>
+          <FlashDriverDll>UL2V8M(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0GD32E235 -FS08000000 -FL010000 -FP0($$Device:GD32E235CB$Flash\GD32E235.FLM))</FlashDriverDll>
           <DeviceId>0</DeviceId>
           <RegisterFile>$$Device:GD32E235CB$Device\Include\gd32e235.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
@@ -185,7 +185,6 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
             <RvdsMve>0</RvdsMve>
-            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -246,12 +245,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x4000</Size>
+                <Size>0x2000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x20000</Size>
+                <Size>0x10000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -276,7 +275,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x20000</Size>
+                <Size>0x10000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -301,7 +300,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x4000</Size>
+                <Size>0x2000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -339,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>GD32E235</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include;..\..\Utilities;..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include;..\;..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\include;..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\portable\GCC\ARM_CM23_NTZ\non_secure</IncludePath>
+              <IncludePath>..\\..\\..\\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include;..\\..\\Utilities;..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include;..\;..\\..\\..\\..\\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\include;..\\..\\..\\..\\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\portable\GCC\ARM_CM23_NTZ\non_secure</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -352,7 +351,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <ClangAsOpt>4</ClangAsOpt>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -399,19 +398,9 @@
           <GroupName>FreeRTOS</GroupName>
           <Files>
             <File>
-              <FileName>croutine.c</FileName>
+              <FileName>tasks.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\croutine.c</FilePath>
-            </File>
-            <File>
-              <FileName>event_groups.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\event_groups.c</FilePath>
-            </File>
-            <File>
-              <FileName>list.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\list.c</FilePath>
+              <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\tasks.c</FilePath>
             </File>
             <File>
               <FileName>queue.c</FileName>
@@ -419,9 +408,9 @@
               <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\queue.c</FilePath>
             </File>
             <File>
-              <FileName>tasks.c</FileName>
+              <FileName>list.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\tasks.c</FilePath>
+              <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\list.c</FilePath>
             </File>
             <File>
               <FileName>timers.c</FileName>
@@ -429,9 +418,19 @@
               <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\timers.c</FilePath>
             </File>
             <File>
+              <FileName>event_groups.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\event_groups.c</FilePath>
+            </File>
+            <File>
               <FileName>stream_buffer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\stream_buffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>croutine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\croutine.c</FilePath>
             </File>
             <File>
               <FileName>heap_4.c</FileName>
@@ -456,7 +455,7 @@
             <File>
               <FileName>system_gd32e23x.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\system_gd32e23x.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\system_gd32e23x.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -466,97 +465,97 @@
             <File>
               <FileName>gd32e23x_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_adc.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_adc.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_cmp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_cmp.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_cmp.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_crc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_crc.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_crc.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_dbg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dbg.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dbg.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dma.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dma.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_exti.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_exti.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_exti.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_fmc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fmc.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fmc.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_fwdgt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fwdgt.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fwdgt.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_gpio.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_gpio.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_i2c.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_i2c.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_misc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_misc.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_misc.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_pmu.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_pmu.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_rcu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rcu.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rcu.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rtc.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rtc.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_spi.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_spi.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_syscfg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_syscfg.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_syscfg.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_timer.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_timer.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_usart.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_usart.c</FilePath>
             </File>
             <File>
               <FileName>gd32e23x_wwdgt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_wwdgt.c</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_wwdgt.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -566,7 +565,7 @@
             <File>
               <FileName>gd32e235c_eval.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\Utilities\gd32e235c_eval.c</FilePath>
+              <FilePath>..\\..\\Utilities\gd32e235c_eval.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -576,7 +575,7 @@
             <File>
               <FileName>startup_gd32e23x.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\ARM\startup_gd32e23x.s</FilePath>
+              <FilePath>..\\..\\..\\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\ARM\startup_gd32e23x.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -611,3 +610,4 @@
   </RTE>
 
 </Project>
+

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>GD32E235C_EVAL</name>
 	<comment></comment>
@@ -40,6 +40,11 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>FreeRTOS</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>Peripherals</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -70,29 +75,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/main.c</locationURI>
 		</link>
 		<link>
-			<name>FreeRTOS/croutine.c</name>
+			<name>CMSIS/system_gd32e23x.c</name>
 			<type>1</type>
-			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/croutine.c</locationURI>
+			<locationURI>PARENT-3-PROJECT_LOC/GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Source/system_gd32e23x.c</locationURI>
 		</link>
 		<link>
-			<name>FreeRTOS/event_groups.c</name>
+			<name>Doc/readme.txt</name>
 			<type>1</type>
-			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/event_groups.c</locationURI>
-		</link>
-		<link>
-			<name>FreeRTOS/list.c</name>
-			<type>1</type>
-			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/list.c</locationURI>
-		</link>
-		<link>
-			<name>FreeRTOS/queue.c</name>
-			<type>1</type>
-			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/queue.c</locationURI>
-		</link>
-		<link>
-			<name>FreeRTOS/stream_buffer.c</name>
-			<type>1</type>
-			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/stream_buffer.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/readme.txt</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS/tasks.c</name>
@@ -100,9 +90,34 @@
 			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/tasks.c</locationURI>
 		</link>
 		<link>
+			<name>FreeRTOS/queue.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/queue.c</locationURI>
+		</link>
+		<link>
+			<name>FreeRTOS/list.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/list.c</locationURI>
+		</link>
+		<link>
 			<name>FreeRTOS/timers.c</name>
 			<type>1</type>
 			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/timers.c</locationURI>
+		</link>
+		<link>
+			<name>FreeRTOS/event_groups.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/event_groups.c</locationURI>
+		</link>
+		<link>
+			<name>FreeRTOS/stream_buffer.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/stream_buffer.c</locationURI>
+		</link>
+		<link>
+			<name>FreeRTOS/croutine.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/croutine.c</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS/heap_4.c</name>
@@ -118,16 +133,6 @@
 			<name>FreeRTOS/portasm.c</name>
 			<type>1</type>
 			<locationURI>PARENT-4-PROJECT_LOC/Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/GCC/ARM_CM23_NTZ/non_secure/portasm.c</locationURI>
-		</link>
-		<link>
-			<name>CMSIS/system_gd32e23x.c</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Source/system_gd32e23x.c</locationURI>
-		</link>
-		<link>
-			<name>Doc/readme.txt</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/readme.txt</locationURI>
 		</link>
 		<link>
 			<name>Peripherals/gd32e23x_adc.c</name>
@@ -230,7 +235,7 @@
 			<locationURI>PARENT-3-PROJECT_LOC/GD32E23x_Firmware_Library/CMSIS/GD/GD32E23x/Source/GCC/startup_gd32e23x.S</locationURI>
 		</link>
 		<link>
-			<name>Utilities/GD32E235C_EVAL.c</name>
+			<name>Utilities/gd32e235c_eval.c</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/Utilities/gd32e235c_eval.c</locationURI>
 		</link>
@@ -241,3 +246,4 @@
 		</link>
 	</linkedResources>
 </projectDescription>
+

@@ -35,9 +35,8 @@ OF SUCH DAMAGE.
 #include "gd32e23x_it.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "semphr.h"
 
-extern SemaphoreHandle_t binary_semaphore;
+extern TaskHandle_t led2_task_handle;
 
 /*!
     \brief      this function handles NMI exception
@@ -65,7 +64,7 @@ void HardFault_Handler(void)
     }
 }
 
-/*!
+/*! 
     \brief      this function handles external line 0 interrupt request
     \param[in]  none
     \param[out] none
@@ -77,10 +76,8 @@ void EXTI0_1_IRQHandler(void)
 
     if(RESET != exti_interrupt_flag_get(EXTI_0)) {
         exti_interrupt_flag_clear(EXTI_0);
-        if(NULL != binary_semaphore) {
-            /* release binary semaphores. */
-            xSemaphoreGiveFromISR(binary_semaphore, &xHigherPriorityTaskWoken);
-            /* make a task switch if necessary. */
+        if(NULL != led2_task_handle) {
+            vTaskNotifyGiveFromISR(led2_task_handle, &xHigherPriorityTaskWoken);
             portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
         }
     }

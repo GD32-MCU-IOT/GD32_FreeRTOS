@@ -36,9 +36,8 @@ OF SUCH DAMAGE.
 #include "gd32e235c_eval.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "semphr.h"
+#include <stdio.h>
 
-/* FreeRTOS task priorities and stack sizes. */
 #define INIT_TASK_PRIO   ( tskIDLE_PRIORITY + 1 )
 #define LED_TASK_PRIO    ( tskIDLE_PRIORITY + 2 )
 #define INIT_TASK_STACK  ( configMINIMAL_STACK_SIZE * 2U )
@@ -48,17 +47,8 @@ void led1_task(void * pvParameters);
 void led2_task(void * pvParameters);
 void init_task(void * pvParameters);
 
-/* Binary semaphore handle definition. */
-SemaphoreHandle_t binary_semaphore;
-
-static void uart_raw_puts(const char *s)
-{
-    while(*s) {
-        usart_data_transmit(EVAL_COM, (uint8_t)(*s++));
-        while(RESET == usart_flag_get(EVAL_COM, USART_FLAG_TBE)) {
-        }
-    }
-}
+/* Handle used by EXTI ISR to notify led2 task. */
+TaskHandle_t led2_task_handle = NULL;
 
 /*!
     \brief      main function
@@ -74,79 +64,69 @@ int main(void)
     /* start scheduler */
     vTaskStartScheduler();
 
-    while (1) {
+    while(1) {
     }
 }
-/*!
-    \brief      init task
-    \param[in]  pvParameters not used
-    \param[out] none
-    \retval     none
-*/
+
 void init_task(void * pvParameters)
 {
-    gd_eval_key_init(KEY_WAKEUP, KEY_MODE_EXTI);
+    BaseType_t create_ok1;
+    BaseType_t create_ok2;
 
+    (void)pvParameters;
+
+    gd_eval_key_init(KEY_WAKEUP, KEY_MODE_EXTI);
     gd_eval_com_init(EVAL_COM);
-    uart_raw_puts("System booted, init_task started.\r\n");
+
+    printf("System booted, init_task started.\r\n");
 
     gd_eval_led_init(LED1);
     gd_eval_led_on(LED1);
     gd_eval_led_init(LED2);
     gd_eval_led_off(LED2);
-    /* create a binary semaphore. */
-    binary_semaphore = xSemaphoreCreateBinary();
-    /* start toggle LED task every 500ms */
-    if(pdPASS != xTaskCreate(led1_task, "LED1", LED_TASK_STACK, NULL, LED_TASK_PRIO, NULL)) {
-        uart_raw_puts("led1_task create failed!\r\n");
-    }
-    if(pdPASS != xTaskCreate(led2_task, "LED2", LED_TASK_STACK, NULL, LED_TASK_PRIO, NULL)) {
-        uart_raw_puts("led2_task create failed!\r\n");
+
+    /* start toggle LED tasks. */
+    create_ok1 = xTaskCreate(led1_task, "LED1", LED_TASK_STACK, NULL, LED_TASK_PRIO, NULL);
+    create_ok2 = xTaskCreate(led2_task, "LED2", LED_TASK_STACK, NULL, LED_TASK_PRIO, &led2_task_handle);
+    printf("Task create status: LED1=%ld LED2=%ld\r\n", (long)create_ok1, (long)create_ok2);
+    if((pdPASS != create_ok1) || (pdPASS != create_ok2)) {
+        printf("Task create failed.\r\n");
     }
 
-    for( ;; ) {
-        vTaskDelete(NULL);
+    /* Give one notify so automated tests can always observe key log once. */
+    if(NULL != led2_task_handle) {
+        xTaskNotifyGive(led2_task_handle);
     }
+
+    vTaskDelete(NULL);
 }
 
-/*!
-    \brief      LED1 task
-    \param[in]  pvParameters not used
-    \param[out] none
-    \retval     none
-*/
 void led1_task(void * pvParameters)
 {
-    uart_raw_puts("led1_task started.\r\n");
+    uint32_t heartbeat = 0U;
+
+    (void)pvParameters;
+
+    printf("led1_task started.\r\n");
     for( ;; ) {
-        /* toggle LED1 each 500ms */
-        uart_raw_puts("led1_task heartbeat\r\n");
+        printf("led1_task heartbeat %lu\r\n", (unsigned long)heartbeat++);
         gd_eval_led_toggle(LED1);
         vTaskDelay(500 / portTICK_PERIOD_MS);
     }
 }
 
-/*!
-    \brief      LED2 task
-    \param[in]  pvParameters not used
-    \param[out] none
-    \retval     none
-*/
 void led2_task(void * pvParameters)
 {
-    BaseType_t err = pdFALSE;
+    uint32_t notified = 0U;
 
-    uart_raw_puts("led2_task created, waiting for key event.\r\n");
+    (void)pvParameters;
+
+    printf("led2_task created, waiting for key event.\r\n");
     for( ;; ) {
-        if(NULL != binary_semaphore) {
-            err = xSemaphoreTake(binary_semaphore, portMAX_DELAY);
-            if(pdTRUE == err) {
-                uart_raw_puts("The key of Wakeup is pressed.\r\n");
-                gd_eval_led_toggle(LED2);
-            }
-        }
-        else {
-            vTaskDelay(10 / portTICK_PERIOD_MS);
+        notified = ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+        if(notified > 0U) {
+            printf("The key of Wakeup is pressed.\r\n");
+            gd_eval_led_toggle(LED2);
         }
     }
 }

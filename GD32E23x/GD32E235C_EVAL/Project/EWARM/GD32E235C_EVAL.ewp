@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>3</fileVersion>
     <configuration>
@@ -345,12 +345,12 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include</state>
-                    <state>$PROJ_DIR$\..\..\Utilities</state>
+                    <state>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Include</state>
+                    <state>$PROJ_DIR$\..\\..\\Utilities</state>
                     <state>$PROJ_DIR$\..</state>
-                    <state>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\portable\IAR\ARM_CM23_NTZ\non_secure</state>
+                    <state>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Include</state>
+                    <state>$PROJ_DIR$\..\\..\\..\\..\\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\include</state>
+                    <state>$PROJ_DIR$\..\\..\\..\\..\\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\portable\IAR\ARM_CM23_NTZ\non_secure</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -621,9 +621,8 @@
                 <option>
                     <name>AUserIncludes</name>
                     <state>$PROJ_DIR$\..</state>
-                    <state>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\CMSIS</state>
-                    <state>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\include</state>
-                    <state>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\portable\IAR\ARM_CM23_NTZ\non_secure</state>
+                    <state>$PROJ_DIR$\..\\..\\..\\..\\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\include</state>
+                    <state>$PROJ_DIR$\..\\..\\..\\..\\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\portable\IAR\ARM_CM23_NTZ\non_secure</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -772,15 +771,15 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$\GD32E235x8_freertos.icf</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
-                    <state>$PROJ_DIR$\GD32E235x8_freertos.icf</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>IlinkEnableRemarks</name>
@@ -1056,25 +1055,25 @@
     <group>
         <name>FreeRTOS</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\croutine.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\event_groups.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\list.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\tasks.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\queue.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\stream_buffer.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\tasks.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\list.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\timers.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\event_groups.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\stream_buffer.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\croutine.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\Middleware\Third_Party\FreeRTOS-Kernel-11.2.0\portable\MemMang\heap_4.c</name>
@@ -1089,7 +1088,7 @@
     <group>
         <name>CMSIS</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\system_gd32e23x.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\system_gd32e23x.c</name>
         </file>
     </group>
     <group>
@@ -1101,73 +1100,74 @@
     <group>
         <name>GD32E235_EVAL</name>
         <file>
-            <name>$PROJ_DIR$\..\..\Utilities\gd32e235c_eval.c</name>
+            <name>$PROJ_DIR$\..\\..\\Utilities\gd32e235c_eval.c</name>
         </file>
     </group>
     <group>
         <name>GD32E23x_Peripherals</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_adc.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_adc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_cmp.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_cmp.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_crc.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_crc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dbg.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dbg.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dma.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_dma.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_exti.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_exti.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fmc.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fmc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fwdgt.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_fwdgt.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_gpio.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_gpio.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_i2c.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_i2c.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_misc.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_misc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_pmu.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_pmu.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rcu.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rcu.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rtc.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_rtc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_spi.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_spi.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_syscfg.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_syscfg.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_timer.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_timer.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_usart.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_usart.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_wwdgt.c</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\GD32E23x_standard_peripheral\Source\gd32e23x_wwdgt.c</name>
         </file>
     </group>
     <group>
         <name>Startup</name>
         <file>
-            <name>$PROJ_DIR$\..\..\..\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\IAR\startup_gd32e23x.s</name>
+            <name>$PROJ_DIR$\..\\..\\..\\GD32E23x_Firmware_Library\CMSIS\GD\GD32E23x\Source\IAR\startup_gd32e23x.s</name>
         </file>
     </group>
 </project>
+

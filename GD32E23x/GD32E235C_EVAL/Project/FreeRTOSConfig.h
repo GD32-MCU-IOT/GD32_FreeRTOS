@@ -71,7 +71,8 @@ extern uint32_t SystemCoreClock;
 
 #define configSUPPORT_STATIC_ALLOCATION               0
 #define configSUPPORT_DYNAMIC_ALLOCATION              1
-#define configTOTAL_HEAP_SIZE                         ( ( size_t ) ( 6 * 1024 ) )
+/* 4 tasks (INIT/LED1/LED2/IDLE) need ~4.1KB; 4KB fails depending on ucHeap alignment. */
+#define configTOTAL_HEAP_SIZE                         ( ( size_t ) ( 5 * 1024 ) )
 
 /******************************************************************************/
 /* Feature specific definitions. **********************************************/
