@@ -1,0 +1,386 @@
+{
+  "projectname": "Project",
+  "mcu": "GD32C113VBT6",
+  "debug": {
+    "activeConfiguration": "Debug",
+    "configurations": [
+      {
+        "name": "Debug",
+        "probe": "gdlink",
+        "sn": "",
+        "cfg": [],
+        "interface": "swd",
+        "speed": 4000,
+        "svdFile": "GD32C11x.svd",
+        "elfFile": "",
+        "resetOnConnect": true,
+        "loadSymbolsOnly": false,
+        "freezePeripherals": false
+      }
+    ]
+  },
+  "scanExcludes": [
+    ".git/",
+    ".svn/",
+    ".vscode/"
+  ],
+  "ProjectActiveConfigurations": "Debug",
+  "configurations": {
+    "Debug": {
+      "targetProcessor": {
+        "armFamily": "cortex-m4",
+        "architecture": "None",
+        "instructionSet": "Thumb",
+        "floatABI": "Hard",
+        "fpuType": "fpv4-sp-d16",
+        "otherTargetFlags": ""
+      },
+      "optimization": {
+        "level": "-O0",
+        "messageLength": true,
+        "signedChar": true,
+        "functionSections": true,
+        "dataSections": true,
+        "noCommon": false,
+        "pic": false,
+        "lto": false,
+        "otherFlags": ""
+      },
+      "warnings": {
+        "syntaxOnly": false,
+        "inhibitAll": false,
+        "werror": false,
+        "pedantic": false,
+        "pedanticErrors": false,
+        "wall": false,
+        "wextra": false,
+        "wunused": false,
+        "wuninitialized": false,
+        "wconversion": false,
+        "otherFlags": ""
+      },
+      "debugging": {
+        "level": "-g3",
+        "prof": false,
+        "gprof": false,
+        "otherFlags": ""
+      },
+      "outputFile": {
+        "list": true,
+        "dump": false,
+        "hex": true,
+        "bin": true,
+        "mot": false,
+        "size": true,
+        "objcopyFlags": "",
+        "objdumpFlags": "--source --all-headers --demangle --line-numbers --wide",
+        "sizeFlags": "--format=berkeley"
+      },
+      "buildSteps": {
+        "preBuild": {
+          "command": "",
+          "description": ""
+        },
+        "postBuild": {
+          "command": "",
+          "description": ""
+        }
+      },
+      "buildArtifact": {
+        "artifactType": "executable",
+        "artifactName": "${ProjName}",
+        "artifactExtension": "elf",
+        "outputPrefix": ""
+      },
+      "excludedFiles": [],
+      "compiler": {
+        "general": {
+          "cStandard": "-std=gnu11",
+          "otherFlags": ""
+        },
+        "preprocessor": {
+          "defines": [
+            "GD32C11X",
+            "GD_ECLIPSE_GCC",
+            "USE_STDPERIPH_DRIVER"
+          ]
+        },
+        "includes": {
+          "includePaths": [
+            "..",
+            "../../../GD32C11x_Firmware_Library/CMSIS",
+            "../../../GD32C11x_Firmware_Library/CMSIS/GD/GD32C11x/Include",
+            "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Include",
+            "../../Utilities",
+            "../../Utilities/LCD_Commom",
+            "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/include",
+            "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/GCC/ARM_CM4F"
+          ],
+          "systemPaths": [],
+          "includeFiles": []
+        }
+      },
+      "linker": {
+        "general": {
+          "linkerScript": "gd32c11x_flash.ld",
+          "nostartfiles": false,
+          "nodefaultlibs": false,
+          "nostdlib": false,
+          "gcSections": true,
+          "stripAll": false
+        },
+        "libraries": {
+          "libs": [],
+          "searchPaths": [
+            "ldscripts/"
+          ]
+        },
+        "miscellaneous": {
+          "linkerFlags": [],
+          "otherObjects": [],
+          "generateMap": true,
+          "crossReference": false,
+          "newlibNano": true,
+          "printfFloat": false,
+          "noSyscalls": true,
+          "otherFlags": "-Wl,--no-warn-rwx-segments"
+        }
+      },
+      "assembler": {
+        "preprocessor": {
+          "usePreprocessor": true,
+          "nostdinc": false
+        },
+        "miscellaneous": {
+          "assemblerFlags": "",
+          "generateListing": false,
+          "verbose": false,
+          "otherFlags": ""
+        },
+        "includes": {
+          "includePaths": [],
+          "systemPaths": [],
+          "includeFiles": []
+        }
+      },
+      "sourceFiles": [
+        "../main.c",
+        "../gd32c11x_it.c",
+        "../../../GD32C11x_Firmware_Library/CMSIS/GD/GD32C11x/Source/system_gd32c11x.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_adc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_bkp.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_can.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_crc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_ctc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_dac.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_dbg.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_dma.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_exmc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_exti.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_fmc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_fwdgt.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_gpio.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_i2c.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_misc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_pmu.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_rcu.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_rtc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_spi.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_timer.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_usart.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_wwdgt.c",
+        "../../Utilities/gd32c113v_eval.c",
+        "../../Utilities/gd32c113v_lcd_eval.c",
+        "../../Utilities/LCD_Commom/lcd_font.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/croutine.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/event_groups.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/list.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/queue.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/stream_buffer.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/tasks.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/timers.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/MemMang/heap_4.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/GCC/ARM_CM4F/port.c",
+        "gcc_startup/startup_gd32c11x.S"
+      ]
+    },
+    "Release": {
+      "targetProcessor": {
+        "armFamily": "cortex-m4",
+        "architecture": "None",
+        "instructionSet": "Thumb",
+        "floatABI": "Hard",
+        "fpuType": "fpv4-sp-d16",
+        "otherTargetFlags": ""
+      },
+      "optimization": {
+        "level": "-O0",
+        "messageLength": true,
+        "signedChar": true,
+        "functionSections": true,
+        "dataSections": true,
+        "noCommon": false,
+        "pic": false,
+        "lto": false,
+        "otherFlags": ""
+      },
+      "warnings": {
+        "syntaxOnly": false,
+        "inhibitAll": false,
+        "werror": false,
+        "pedantic": false,
+        "pedanticErrors": false,
+        "wall": false,
+        "wextra": false,
+        "wunused": false,
+        "wuninitialized": false,
+        "wconversion": false,
+        "otherFlags": ""
+      },
+      "debugging": {
+        "level": "-g",
+        "prof": false,
+        "gprof": false,
+        "otherFlags": ""
+      },
+      "outputFile": {
+        "list": true,
+        "dump": false,
+        "hex": true,
+        "bin": true,
+        "mot": false,
+        "size": true,
+        "objcopyFlags": "",
+        "objdumpFlags": "--source --all-headers --demangle --line-numbers --wide",
+        "sizeFlags": "--format=berkeley"
+      },
+      "buildSteps": {
+        "preBuild": {
+          "command": "",
+          "description": ""
+        },
+        "postBuild": {
+          "command": "",
+          "description": ""
+        }
+      },
+      "buildArtifact": {
+        "artifactType": "executable",
+        "artifactName": "${ProjName}",
+        "artifactExtension": "elf",
+        "outputPrefix": ""
+      },
+      "excludedFiles": [],
+      "compiler": {
+        "general": {
+          "cStandard": "-std=gnu11",
+          "otherFlags": ""
+        },
+        "preprocessor": {
+          "defines": [
+            "GD32C11X",
+            "USE_STDPERIPH_DRIVER",
+            "NDEBUG"
+          ]
+        },
+        "includes": {
+          "includePaths": [
+            "..",
+            "../../../GD32C11x_Firmware_Library/CMSIS",
+            "../../../GD32C11x_Firmware_Library/CMSIS/GD/GD32C11x/Include",
+            "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Include",
+            "../../Utilities",
+            "../../Utilities/LCD_Commom",
+            "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/include",
+            "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/GCC/ARM_CM4F"
+          ],
+          "systemPaths": [],
+          "includeFiles": []
+        }
+      },
+      "linker": {
+        "general": {
+          "linkerScript": "gd32c11x_flash.ld",
+          "nostartfiles": false,
+          "nodefaultlibs": false,
+          "nostdlib": false,
+          "gcSections": true,
+          "stripAll": false
+        },
+        "libraries": {
+          "libs": [],
+          "searchPaths": [
+            "ldscripts/"
+          ]
+        },
+        "miscellaneous": {
+          "linkerFlags": [],
+          "otherObjects": [],
+          "generateMap": true,
+          "crossReference": false,
+          "newlibNano": true,
+          "printfFloat": false,
+          "noSyscalls": true,
+          "otherFlags": "-Wl,--no-warn-rwx-segments"
+        }
+      },
+      "assembler": {
+        "preprocessor": {
+          "usePreprocessor": true,
+          "nostdinc": false
+        },
+        "miscellaneous": {
+          "assemblerFlags": "",
+          "generateListing": false,
+          "verbose": false,
+          "otherFlags": ""
+        },
+        "includes": {
+          "includePaths": [],
+          "systemPaths": [],
+          "includeFiles": []
+        }
+      },
+      "sourceFiles": [
+        "../main.c",
+        "../gd32c11x_it.c",
+        "../../../GD32C11x_Firmware_Library/CMSIS/GD/GD32C11x/Source/system_gd32c11x.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_adc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_bkp.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_can.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_crc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_ctc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_dac.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_dbg.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_dma.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_exmc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_exti.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_fmc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_fwdgt.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_gpio.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_i2c.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_misc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_pmu.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_rcu.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_rtc.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_spi.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_timer.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_usart.c",
+        "../../../GD32C11x_Firmware_Library/GD32C11x_standard_peripheral/Source/gd32c11x_wwdgt.c",
+        "../../Utilities/gd32c113v_eval.c",
+        "../../Utilities/gd32c113v_lcd_eval.c",
+        "../../Utilities/LCD_Commom/lcd_font.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/croutine.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/event_groups.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/list.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/queue.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/stream_buffer.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/tasks.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/timers.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/MemMang/heap_4.c",
+        "../../../../Middleware/Third_Party/FreeRTOS-Kernel-11.2.0/portable/GCC/ARM_CM4F/port.c",
+        "gcc_startup/startup_gd32c11x.S"
+      ]
+    }
+  }
+}
